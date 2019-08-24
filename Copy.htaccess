@@ -1,0 +1,98 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .+ - [L]
+RewriteCond ${REQUEST_FILENAME} !-f [OR]
+RewriteCond ${REQUEST_FILENAME} !-d
+RewriteRule ^ekattur_tv.m3u8$ /handler.php?channel=ekattur_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/ekattur_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=ekattur_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/ekattur_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=ekattur_tv
+RewriteRule ^independent_tv.m3u8$ /handler.php?channel=independent_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/independent_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=independent_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/independent_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=independent_tv
+RewriteRule ^nickelodeon.m3u8$ /handler.php?channel=nickelodeon?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/nickelodeon_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=nickelodeon
+RewriteRule ^hls/([^/]*)/([^/]*)/nickelodeon_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=nickelodeon
+RewriteRule ^my_tv.m3u8$ /handler.php?channel=my_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/my_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=my_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/my_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=my_tv
+RewriteRule ^btv_world.m3u8$ /handler.php?channel=btv_world?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/btv_world_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=btv_world
+RewriteRule ^hls/([^/]*)/([^/]*)/btv_world_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=btv_world
+RewriteRule ^atn_bangla.m3u8$ /handler.php?channel=atn_bangla?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_bangla_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=atn_bangla
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_bangla_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=atn_bangla
+RewriteRule ^dhoom.m3u8$ /handler.php?channel=dhoom?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/dhoom_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=dhoom
+RewriteRule ^hls/([^/]*)/([^/]*)/dhoom_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=dhoom
+RewriteRule ^sa_tv.m3u8$ /handler.php?channel=sa_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/sa_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=sa_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/sa_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=sa_tv
+RewriteRule ^bongo_movies.m3u8$ /handler.php?channel=bongo_movies?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/bongo_movies_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=bongo_movies
+RewriteRule ^hls/([^/]*)/([^/]*)/bongo_movies_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=bongo_movies
+RewriteRule ^ananda_tv.m3u8$ /handler.php?channel=ananda_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/ananda_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=ananda_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/ananda_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=ananda_tv
+RewriteRule ^mohona_tv.m3u8$ /handler.php?channel=mohona_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/mohona_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=mohona_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/mohona_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=mohona_tv
+RewriteRule ^gaan_bangla.m3u8$ /handler.php?channel=gaan_bangla?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/gaan_bangla_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=gaan_bangla
+RewriteRule ^hls/([^/]*)/([^/]*)/gaan_bangla_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=gaan_bangla
+RewriteRule ^atn_news.m3u8$ /handler.php?channel=atn_news?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_news_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=atn_news
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_news_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=atn_news
+RewriteRule ^nagorik_tv.m3u8$ /handler.php?channel=nagorik_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/nagorik_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=nagorik_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/nagorik_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=nagorik_tv
+RewriteRule ^zoom.m3u8$ /handler.php?channel=zoom?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/zoom_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=zoom
+RewriteRule ^hls/([^/]*)/([^/]*)/zoom_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=zoom
+RewriteRule ^bbc_world.m3u8$ /handler.php?channel=bbc_world?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/bbc_world_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=bbc_world
+RewriteRule ^hls/([^/]*)/([^/]*)/bbc_world_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=bbc_world
+RewriteRule ^boishakhi_tv.m3u8$ /handler.php?channel=boishakhi_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/boishakhi_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=boishakhi_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/boishakhi_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=boishakhi_tv
+RewriteRule ^atn_music.m3u8$ /handler.php?channel=atn_music?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_music_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=atn_music
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_music_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=atn_music
+RewriteRule ^dbc_news.m3u8$ /handler.php?channel=dbc_news?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/dbc_news_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=dbc_news
+RewriteRule ^hls/([^/]*)/([^/]*)/dbc_news_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=dbc_news
+RewriteRule ^asian_tv.m3u8$ /handler.php?channel=asian_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/asian_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=asian_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/asian_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=asian_tv
+RewriteRule ^ruposhi_bangla.m3u8$ /handler.php?channel=ruposhi_bangla?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/ruposhi_bangla_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=ruposhi_bangla
+RewriteRule ^hls/([^/]*)/([^/]*)/ruposhi_bangla_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=ruposhi_bangla
+RewriteRule ^hum_sitarey.m3u8$ /handler.php?channel=hum_sitarey?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/hum_sitarey_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=hum_sitarey
+RewriteRule ^hls/([^/]*)/([^/]*)/hum_sitarey_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=hum_sitarey
+RewriteRule ^atn_islamic_tv.m3u8$ /handler.php?channel=atn_islamic_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_islamic_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=atn_islamic_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/atn_islamic_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=atn_islamic_tv
+RewriteRule ^sangsad_tv.m3u8$ /handler.php?channel=sangsad_tv?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/sangsad_tv_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=sangsad_tv
+RewriteRule ^hls/([^/]*)/([^/]*)/sangsad_tv_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=sangsad_tv
+RewriteRule ^al_jazeera.m3u8$ /handler.php?channel=al_jazeera?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/al_jazeera_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=al_jazeera
+RewriteRule ^hls/([^/]*)/([^/]*)/al_jazeera_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=al_jazeera
+RewriteRule ^dw.m3u8$ /handler.php?channel=dw?redirect=1
+RewriteRule ^hls/([^/]*)/([^/]*)/dw_mid/index.m3u8$ /handler.php?token=$1&timestamp=$2&channel=dw
+RewriteRule ^hls/([^/]*)/([^/]*)/dw_mid/([^/]*).ts$ /handler.php?token=$1&timestamp=$2&file=$3&channel=dw
+
+
+
+
+
+
+Options -Indexes
+ErrorDocument 401 /index.php
+ErrorDocument 402 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+ErrorDocument 500 /index.php
